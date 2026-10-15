@@ -24,7 +24,7 @@ public class FaKeyboardService extends InputMethodService {
   root.addView(makeRow(new String[]{"Paste","Copy","Cut","Undo"}));
   root.addView(makeRow(new String[]{"دکمه ","و ","در ","را ","که "}));
   LinearLayout numRow = makeRow(isFa ? faNums : enNums);
-  Button del = makeKey("⌫", Color.parseColor("#FFD6DD"));
+  Button del = makeKey("\u232B", Color.parseColor("#FFD6DD"));
   del.setOnClickListener(v -> getCurrentInputConnection().deleteSurroundingText(1,0));
   numRow.addView(del);
   root.addView(numRow);
